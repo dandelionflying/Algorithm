@@ -37,7 +37,9 @@ public class Main {
 //        int[] data = {1, 2, 3, 4, 5, 6};
 //        int[] data = {5, 6,  1, 2, 3, 4};
 //        int[] data = {4, 5, 6, 1, 2, 3};
-        int[] data = {4, 5, 6, 1, 2, 2, 3, 3};
+        int[] data = {4, 5, 6, 1,       2,      2, 2, 3, 3};
+        int[] data = {4, 5, 6, 7,       1,      2, 2, 3, 3};
+        int[] data = {5, 6, 1, 2,       2,      2, 3, 3, 4};
 // 需要采用二分法
         int dd = jz6.minNumberInRotateArray(data);
         System.err.println("result:"+dd);
