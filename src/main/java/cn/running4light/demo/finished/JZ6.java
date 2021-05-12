@@ -43,8 +43,7 @@ public class JZ6 {
                     length = length%2 == 1 ?length/2+1:length/2;
                     System.err.println("leftBegin:"+leftBegin+"\tleftEnd:"+leftEnd+"\tlength:"+length+"\tdata:"+array[leftBegin]+"\t"+array[leftEnd]);
                     continue;
-                }
-                if(array[rightBegin]>array[rightEnd]){
+                }else if(array[rightBegin]>array[rightEnd]){
                     // 存在右侧
                     begin = rightBegin;
                     end = rightEnd;
