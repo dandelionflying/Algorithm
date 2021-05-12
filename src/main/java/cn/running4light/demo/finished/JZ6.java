@@ -50,9 +50,8 @@ public class JZ6 {
                     length = length%2 == 1 ?length/2+1:length/2;
                     System.err.println("rightBegin:"+rightBegin+"\trightEnd:"+rightEnd+"\tlength:"+length+"\tdata:"+array[rightBegin]+"\t"+array[rightEnd]);
                     continue;
-                } else {
-                    return array[rightBegin];
                 }
+                return array[rightBegin];
             }
             return 0;
         }else{
