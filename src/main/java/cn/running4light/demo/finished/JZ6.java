@@ -58,11 +58,33 @@ public class JZ6 {
             return 0;
         }
     }
+    public int minNumberInRotateArray2(int [] array) {
+        if(array == null || array.length <= 0){
+            return 0;
+        }
+        int begin = 0;
+        int length = array.length;
+        int end = array.length - 1;
+        if(array[0]<array[end]){
+            return array[0];
+        }
+        while(length>0){
+            if(end - begin == 1){
+                return array[end];
+            }
+            if(array[begin]>array[begin + length/2 - 1]){
+                // 存在左侧
+                end = begin + length/2 - 1;
+                length = length%2 == 1 ?length/2+1:length/2;
+                continue;
+            }else if(array[begin + length/2]>array[end]){
+                // 存在右侧
+                begin = begin + length/2;
+                length = length%2 == 1 ?length/2+1:length/2;
+                continue;
+            }
+            return array[begin + length/2];
+        }
+        return 0;
+    }
 }
-/**
- * 3 4 5 1 2
- * 5 1 2 3 4
- * 2 3 4 5 1
- * 4, 5, 6, 1, 2, 2, 3, 3
- *
- * */
