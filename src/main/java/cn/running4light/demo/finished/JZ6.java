@@ -58,6 +58,7 @@ public class JZ6 {
             return 0;
         }
     }
+
     public int minNumberInRotateArray2(int [] array) {
         if(array == null || array.length <= 0){
             return 0;
