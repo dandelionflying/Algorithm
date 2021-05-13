@@ -1,7 +1,7 @@
 package cn.running4light.demo;
 
 import cn.running4light.demo.finished.JZ6;
-import cn.running4light.demo.unfinished.TreeNode;
+import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 
 /**
