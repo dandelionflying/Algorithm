@@ -28,10 +28,8 @@ public class JZ5 {
             while(!stack1.isEmpty()){
                 stack2.push(stack1.pop());
             }
-            return stack2.pop();
-        }else{
-            return stack2.pop();
         }
+        return stack2.pop();
     }
     /**
      *  @Description    低效
