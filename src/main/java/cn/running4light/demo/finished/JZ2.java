@@ -2,8 +2,13 @@ package cn.running4light.demo.finished;
 
 import java.util.*;
 
-
-public class Solution1 {
+/**
+ *  @title  替换空格
+ *  @Description
+ *  @Author running4light朱泽雄
+ *  @CreateTime 16:08 2021/5/13
+ */
+public class JZ2 {
     /**
      * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
      *
