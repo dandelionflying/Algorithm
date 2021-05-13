@@ -79,6 +79,9 @@ public class JZ4 {
         post(node.right);
         System.err.print(node.val);
     }
-
+    @Override
+    public String toString(){
+        return this.getClass().getName();
+    }
 }
 

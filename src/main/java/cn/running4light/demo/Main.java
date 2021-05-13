@@ -9,9 +9,10 @@ import cn.running4light.demo.finished.JZ4;
  */
 public class Main {
     public static void main(String[] args) {
-        testZJ4();
+//        testZJ4();
 //        testJZ6();
 //        testDivide();
+        Utils.showCatalogue();
     }
     /**
      *  @Description
