@@ -4,6 +4,7 @@ import cn.running4light.demo.finished.JZ6;
 import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
+import cn.running4light.demo.unfinished.LeetCode12;
 
 import java.util.Scanner;
 
@@ -16,7 +17,19 @@ public class Main {
 //        testJZ6();
 //        testDivide();
 //        Utils.showCatalogue();
-        testJZ7();
+//        testJZ7();
+        testLeetCode12();
+    }
+    /*
+     * @description
+     * @Author running4light朱泽雄
+     * @CreateTime 2021/5/14 15:23
+     * @return
+     */
+    private static void testLeetCode12() {
+        LeetCode12 leetCode12 = new LeetCode12();
+        String s = leetCode12.intToRoman(901);
+        System.err.println(s);
     }
 
     private static void testJZ7() {
