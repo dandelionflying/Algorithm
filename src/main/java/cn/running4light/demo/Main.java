@@ -3,6 +3,9 @@ package cn.running4light.demo;
 import cn.running4light.demo.finished.JZ6;
 import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
+import cn.running4light.demo.finished.JZ7;
+
+import java.util.Scanner;
 
 /**
  *
@@ -12,8 +15,24 @@ public class Main {
 //        testZJ4();
 //        testJZ6();
 //        testDivide();
-        Utils.showCatalogue();
+//        Utils.showCatalogue();
+        testJZ7();
     }
+
+    private static void testJZ7() {
+        JZ7 jz = new JZ7();
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        long start1 = System.currentTimeMillis();
+        int result1 = jz.Fibonacci(n);
+        long time1 = System.currentTimeMillis() - start1;
+        System.err.println(result1+"\t耗时："+time1);
+        long start2 = System.currentTimeMillis();
+        int result2 = jz.Fibonacci2(n);
+        long time2 = System.currentTimeMillis() - start2;
+        System.err.println(result2+"\t耗时："+time2);
+    }
+
     /**
      *  @Description
      *  @Author running4light朱泽雄
