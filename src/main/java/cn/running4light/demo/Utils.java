@@ -1,6 +1,7 @@
 package cn.running4light.demo;
 
 import cn.running4light.demo.finished.*;
+import cn.running4light.demo.unfinished.LeetCode12;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class Utils {
         list.add(new Catalogue("旋转数组求最小", JZ6.class));
         list.add(new Catalogue("斐波那契数列", JZ7.class));
         list.add(new Catalogue("跳台阶--斐波那契数列问题", JZ8.class));
+        list.add(new Catalogue("整数转罗马", LeetCode12.class));
         System.err.println(list);
         return list;
     }
