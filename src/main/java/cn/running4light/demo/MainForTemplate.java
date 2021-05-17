@@ -45,10 +45,12 @@ public class MainForTemplate {
 //        Integer[] data = {52,5,6,8,7,1,3,88,121};
         int n = 10000;
         int[] dataSize = {10000,100000};
+        String sort = "desc";
         for (int nn :
                 dataSize) {
             Integer[] data = ArrayGenerator.generateRandom(nn, nn);
-            SortingUtil.test("SelectiveSorting", data, "asc");
+            SortingUtil.test("SelectiveSorting", data, sort);
+            SortingUtil.test("InsertionSorting", data, sort);
         }
 //        long time = System.nanoTime();
 //        SelectiveSorting.sort(data, "asc");

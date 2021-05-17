@@ -1,5 +1,7 @@
 package cn.running4light.demo.template.sort;
 
+import cn.running4light.demo.utils.SortingUtil;
+
 /**
  * @author running4light
  * @description 选择排序算法
@@ -35,7 +37,7 @@ public class SelectiveSorting {
             }
             if (index == data.length - 1) {
                 // 交换
-                swap(data, minIndex, tmpIndex);
+                SortingUtil.swap(data, minIndex, tmpIndex);
                 tmpIndex++;
                 index = tmpIndex + 1;
                 minIndex = tmpIndex;
@@ -59,7 +61,7 @@ public class SelectiveSorting {
             }
             if (index == data.length - 1) {
                 // 交换
-                swap(data, maxIndex, tmpIndex);
+                SortingUtil.swap(data, maxIndex, tmpIndex);
                 tmpIndex++;
                 index = tmpIndex + 1;
                 maxIndex = tmpIndex;
@@ -67,11 +69,5 @@ public class SelectiveSorting {
             }
             index++;
         }
-    }
-
-    public static <T> void swap(T[] data, int index, int index2){
-        T tmp = data[index];
-        data[index] = data[index2];
-        data[index2] = tmp;
     }
 }

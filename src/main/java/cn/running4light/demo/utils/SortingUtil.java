@@ -30,12 +30,13 @@ public class SortingUtil {
         }
 
         long endTime = System.nanoTime();
-        for (T d :
+        /*for (T d :
                 data) {
             System.err.print(d+" ");
-        }
+        }*/
         double result = (endTime - time) / 1000000000.0;
-        System.err.println("数组长度:"+data.length+"\t执行时间："+result+" s");
+        boolean check = SortingUtil.checkSorted(data, sort);
+        System.err.print("\n排序算法："+sortName+"\t数组长度:"+data.length+"\t执行时间："+result+" s" +"\t是否排序成功：" +check);
     }
     /**
      * @Description 排序校验
@@ -44,9 +45,9 @@ public class SortingUtil {
      */
     public static <T extends Comparable<T>> boolean checkSorted(T[] data, String sort){
         if("asc".equals(sort)){
-            return checkDesc(data);
-        }else{
             return checkAsc(data);
+        }else{
+            return checkDesc(data);
         }
     }
     /**
@@ -74,5 +75,11 @@ public class SortingUtil {
                 return false;
         }
         return true;
+    }
+
+    public static <T> void swap(T[] data, int index, int index2){
+        T tmp = data[index];
+        data[index] = data[index2];
+        data[index2] = tmp;
     }
 }
