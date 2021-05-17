@@ -30,13 +30,13 @@ public class SortingUtil {
         }
 
         long endTime = System.nanoTime();
-        /*for (T d :
+        for (T d :
                 data) {
             System.err.print(d+" ");
-        }*/
+        }
         double result = (endTime - time) / 1000000000.0;
         boolean check = SortingUtil.checkSorted(data, sort);
-        System.err.print("\n排序算法："+sortName+"\t数组长度:"+data.length+"\t执行时间："+result+" s" +"\t是否排序成功：" +check);
+        System.err.println("\n排序算法："+sortName+"\t数组长度:"+data.length+"\t执行时间："+result+" s" +"\t是否排序成功：" +check);
     }
     /**
      * @Description 排序校验

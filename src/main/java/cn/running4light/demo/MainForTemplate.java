@@ -45,7 +45,7 @@ public class MainForTemplate {
 //        Integer[] data = {52,5,6,8,7,1,3,88,121};
         int n = 10000;
         int[] dataSize = {10000,100000};
-        String sort = "desc";
+        String sort = "asc";
         for (int nn :
                 dataSize) {
             Integer[] data = ArrayGenerator.generateRandom(nn, nn);
