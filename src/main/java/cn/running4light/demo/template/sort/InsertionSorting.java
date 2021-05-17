@@ -5,7 +5,7 @@ import cn.running4light.demo.utils.SortingUtil;
 /**
  * @author running4light
  * @description 插入排序
- *      1.时间复杂度：
+ *      1.时间复杂度：O(n^2)
  *      2.空间复杂度：
  * @createTime 2021/5/17 16:51
  */
