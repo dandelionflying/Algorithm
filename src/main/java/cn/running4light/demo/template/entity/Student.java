@@ -34,4 +34,10 @@ public class Student {
         Student s2 = (Student)student;
         return this.name.equals(s2.getName());
     }
+    @Override
+    public String toString() {
+        return "StudentComparable{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
