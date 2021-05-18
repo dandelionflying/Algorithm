@@ -5,6 +5,7 @@ import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.unfinished.LeetCode12;
+import cn.running4light.demo.finished.LeetCode20;
 
 import java.util.Scanner;
 
@@ -18,7 +19,13 @@ public class Main {
 //        testDivide();
 //        Utils.showCatalogue();
 //        testJZ7();
-        testLeetCode12();
+//        testLeetCode12();
+        testLeetCOde20();
+    }
+
+    private static void testLeetCOde20(){
+        LeetCode20 leetCode20 = new LeetCode20();
+        System.err.println(leetCode20.isValid("{[]()}"));
     }
     /*
      * @description

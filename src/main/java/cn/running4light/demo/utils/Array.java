@@ -122,6 +122,19 @@ public class Array<E> {
         if(index != -1)
             remove(index);
     }
+
+    public E get(int index){
+        if(index < 0 || index > size){
+            throw new IllegalArgumentException("索引非法");
+        }
+        return data[index];
+    }
+    public E getLast(){
+        return get(size - 1);
+    }
+    public E getFirst(){
+        return get(0);
+    }
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
