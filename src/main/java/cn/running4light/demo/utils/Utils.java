@@ -28,6 +28,7 @@ public class Utils {
         // LeetCode
         list.add(new Catalogue("整数转罗马", LeetCode12.class));
         list.add(new Catalogue("有效的括号-- 栈的使用", LeetCode20.class));
+        list.add(new Catalogue("移除链表元素", LeetCode203.class));
 
 
         list.add(new Catalogue("线性查找(最普通的，主要是记录泛型用法)", LinearSearch.class));

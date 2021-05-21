@@ -6,11 +6,14 @@ import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
+import cn.running4light.demo.unfinished.LeetCode692;
 
 import java.util.Scanner;
 
 /**
- *
+ * @Description 算法题目测试入口（牛客 leetcode）
+ * @Author running4light朱泽雄
+ * @CreateTime 9:13 2021/5/19
  */
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +23,14 @@ public class Main {
 //        Utils.showCatalogue();
 //        testJZ7();
 //        testLeetCode12();
-        testLeetCOde20();
+//        testLeetCOde20();
+        testLeetCode692();
+    }
+
+    private static void testLeetCode692() {
+        LeetCode692 leetCode692 = new LeetCode692();
+        String[] s = {"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
+        leetCode692.topKFrequent(s,4);
     }
 
     private static void testLeetCOde20(){
