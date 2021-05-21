@@ -1,9 +1,6 @@
 package cn.running4light.demo;
 
-import cn.running4light.demo.template.entity.Student;
-import cn.running4light.demo.utils.Array;
-import cn.running4light.demo.utils.LinkedList;
-import cn.running4light.demo.utils.LinkedListRecursion;
+import cn.running4light.demo.linkedlist.entity.LinkedListRecursion;
 
 /**
  * @author running4light

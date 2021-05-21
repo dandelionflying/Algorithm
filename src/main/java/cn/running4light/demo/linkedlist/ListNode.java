@@ -1,4 +1,4 @@
-package cn.running4light.demo.utils;
+package cn.running4light.demo.linkedlist;
 
 /**
  * @author running4light

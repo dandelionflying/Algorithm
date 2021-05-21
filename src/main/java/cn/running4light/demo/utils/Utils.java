@@ -1,6 +1,6 @@
 package cn.running4light.demo.utils;
 
-import cn.running4light.demo.Catalogue;
+import cn.running4light.demo.entity.Catalogue;
 import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.LinearSearch;
 import cn.running4light.demo.template.sort.SelectiveSorting;

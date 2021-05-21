@@ -1,4 +1,6 @@
-package cn.running4light.demo.utils;
+package cn.running4light.demo.linkedlist.entity;
+
+import cn.running4light.demo.linkedlist.Node;
 
 /**
  * @author running4light
