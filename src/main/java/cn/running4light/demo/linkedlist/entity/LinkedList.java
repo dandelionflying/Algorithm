@@ -9,13 +9,13 @@ public class LinkedList <E>{
 
 
 
-    private Node head;
-//    private Node dummmyHead;
+//    private Node head;
+    private Node dummmyHead;
     int size;
 
     public LinkedList(){
-        head = null;
-//        dummmyHead = new Node(null,null);
+//        head = null;
+        dummmyHead = new Node(null,null);
         size = 0;
     }
 
@@ -31,12 +31,24 @@ public class LinkedList <E>{
         /*Node node = new Node(e);
         node.next = head;
         head = node;*/
-        head = new Node(e, head);
+//        head = new Node(e, head);
+        add(0, e);
         size++;
     }
 
-    public void add(){
+    public void addLast(E e){
+        add(size, e);
+    }
 
+    public void add(int index, E e){
+        if (index < 0 || index > size)
+            throw new IllegalArgumentException("非法索引");
+        Node prev = dummmyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+        prev.next = new Node(e, prev.next);
+        size++;
     }
 
 }
