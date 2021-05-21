@@ -5,6 +5,7 @@ import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.LinearSearch;
 import cn.running4light.demo.template.sort.SelectiveSorting;
 import cn.running4light.demo.unfinished.LeetCode12;
+import cn.running4light.demo.unfinished.LeetCode206;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,8 @@ public class Utils {
         list.add(new Catalogue("整数转罗马", LeetCode12.class));
         list.add(new Catalogue("有效的括号-- 栈的使用", LeetCode20.class));
         list.add(new Catalogue("移除链表元素", LeetCode203.class));
+        list.add(new Catalogue("翻转链表", LeetCode206.class));
+
 
 
         list.add(new Catalogue("线性查找(最普通的，主要是记录泛型用法)", LinearSearch.class));
