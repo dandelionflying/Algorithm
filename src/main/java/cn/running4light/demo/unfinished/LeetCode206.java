@@ -13,10 +13,10 @@ public class LeetCode206 {
      * @Author running4light朱泽雄
      * @CreateTime 17:16 2021/5/21
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head, int depth) {
         if (head == null || head.next == null)
             return head;
-        ListNode rev = reverseList(head.next);
+        ListNode rev = reverseList(head.next, depth);
         head.next.next = head;
         head.next = null;
         return rev;

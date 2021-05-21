@@ -4,8 +4,10 @@ import cn.running4light.demo.finished.JZ6;
 import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
+import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
+import cn.running4light.demo.unfinished.LeetCode206;
 import cn.running4light.demo.unfinished.LeetCode692;
 
 import java.util.Scanner;
@@ -25,6 +27,24 @@ public class Main {
 //        testLeetCode12();
 //        testLeetCOde20();
         testLeetCode692();
+        testLeetCode206();
+    }
+
+    private static void testLeetCode206() {
+        LeetCode206 leetCode206 = new LeetCode206();
+        ListNode head = new ListNode(1);
+        for (int i = 0; i < 7; i++) {
+
+        }
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+        ListNode node5 = new ListNode(5);
+        ListNode node6 = new ListNode(6);
+
+
+
+        leetCode206.reverseList(head, 0);
     }
 
     private static void testLeetCode692() {
