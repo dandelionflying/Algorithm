@@ -2,6 +2,8 @@ package cn.running4light.demo;
 
 import cn.running4light.demo.template.entity.Student;
 import cn.running4light.demo.utils.Array;
+import cn.running4light.demo.utils.LinkedList;
+import cn.running4light.demo.utils.LinkedListRecursion;
 
 /**
  * @author running4light
@@ -11,7 +13,7 @@ import cn.running4light.demo.utils.Array;
 public class TestMain {
 
     public static void main(String[] args) {
-        Array<Integer> arr = new Array();
+       /* Array<Integer> arr = new Array();
         for (int i = 0; i < 12; i++) {
             arr.addLast(i);
         }
@@ -24,7 +26,17 @@ public class TestMain {
                 students) {
             array.addLast(s);
         }
-        System.err.println(array.toString());
+        System.err.println(array.toString());*/
+        testLinked();
 
+    }
+
+    public static void testLinked(){
+        LinkedListRecursion linkedList = new LinkedListRecursion();
+        linkedList.addFirst(3);
+        linkedList.addFirst(2);
+        linkedList.addFirst(1);
+        linkedList.add(2,10);
+        System.err.println(linkedList.toString());
     }
 }

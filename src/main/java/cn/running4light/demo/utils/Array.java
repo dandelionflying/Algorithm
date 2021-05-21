@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author running4light
- * @description             多此一举，只是为了配合视频教程创建
+ * @description             多此一举，只是为了配合视频教程创建    其实类似Vector的定义
  * @createTime 2021/5/18 11:26
  */
 public class Array<E> {
