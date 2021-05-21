@@ -1,4 +1,4 @@
-package cn.running4light.demo.linkedlist;
+package cn.running4light.demo.linkedlist.entity;
 
 /**
  * @author running4light

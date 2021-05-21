@@ -1,6 +1,6 @@
 package cn.running4light.demo.finished;
 
-import cn.running4light.demo.linkedlist.ListNode;
+import cn.running4light.demo.linkedlist.entity.ListNode;
 
 /**
  * @author running4light

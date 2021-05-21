@@ -1,7 +1,5 @@
 package cn.running4light.demo.linkedlist.entity;
 
-import cn.running4light.demo.linkedlist.Node;
-
 /**
  * @author running4light
  * @description 递归实现链表
