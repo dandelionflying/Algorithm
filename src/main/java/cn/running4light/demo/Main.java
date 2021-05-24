@@ -4,6 +4,7 @@ import cn.running4light.demo.finished.JZ6;
 import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
+import cn.running4light.demo.linkedlist.entity.LinkedListRecursion;
 import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
@@ -26,25 +27,22 @@ public class Main {
 //        testJZ7();
 //        testLeetCode12();
 //        testLeetCOde20();
-        testLeetCode692();
+//        testLeetCode692();
         testLeetCode206();
     }
 
     private static void testLeetCode206() {
         LeetCode206 leetCode206 = new LeetCode206();
-        ListNode head = new ListNode(1);
-        for (int i = 0; i < 7; i++) {
-
+        ListNode head = new ListNode(7);
+        for (int i = 1; i < 7; i++) {
+            head.next = new ListNode(i, head.next);
         }
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        ListNode node6 = new ListNode(6);
+//        LinkedListRecursion linkedList = new LinkedListRecursion();
+//        linkedList.addFirst(3);
 
 
-
-        leetCode206.reverseList(head, 0);
+        ListNode listNode = leetCode206.reverseList(head, 0);
+        System.err.println(listNode);
     }
 
     private static void testLeetCode692() {

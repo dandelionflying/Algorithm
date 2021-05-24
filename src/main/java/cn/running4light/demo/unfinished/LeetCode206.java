@@ -14,11 +14,18 @@ public class LeetCode206 {
      * @CreateTime 17:16 2021/5/21
      */
     public ListNode reverseList(ListNode head, int depth) {
-        if (head == null || head.next == null)
+        System.err.print(generateDepthString(depth));
+        System.err.println("head:" + head);
+        if (head == null || head.next == null) {
+            System.err.print(generateDepthString(depth));
+            System.err.println("Return :" + head);
             return head;
-        ListNode rev = reverseList(head.next, depth);
+        }
+        ListNode rev = reverseList(head.next, depth + 1);
         head.next.next = head;
         head.next = null;
+        System.err.print(generateDepthString(depth));
+        System.err.println("return: " + rev);
         return rev;
     }
     /**
@@ -36,5 +43,13 @@ public class LeetCode206 {
             cur = next;
         }
         return pre;
+    }
+
+    public String generateDepthString(int depth){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <= depth; i++) {
+            sb.append("--");
+        }
+        return sb.toString();
     }
 }

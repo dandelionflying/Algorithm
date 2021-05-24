@@ -8,7 +8,7 @@ package cn.running4light.demo.linkedlist.entity;
 public class ListNode {
 
 
-    public int val;
+    public Integer val;
     public ListNode next;
 
     ListNode() {
@@ -21,6 +21,25 @@ public class ListNode {
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+    @Override
+    public String toString(){
+        if(val ==null && next == null){
+            return null;
+        }
+        StringBuilder sb = new StringBuilder();
+        ListNode node = next;
+        if(val!=null){
+            sb.append(val);
+        }
+        while (true){
+            if(node == null)
+                break;
+            sb.append("-->");
+            sb.append(node.val);
+            node = node.next;
+        }
+        return sb.toString();
     }
 
 }
