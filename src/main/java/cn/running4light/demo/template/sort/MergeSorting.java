@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author running4light
  * @description 归并排序
- *      1.时间复杂度：O(log2n)
+ *      1.时间复杂度：O(nlog2n)
  *      2.空间复杂度：
  * @createTime 2021/5/24 15:18
  */
