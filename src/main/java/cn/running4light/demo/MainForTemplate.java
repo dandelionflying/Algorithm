@@ -51,6 +51,7 @@ public class MainForTemplate {
             Integer[] data = ArrayGenerator.generateRandom(nn, nn);
             SortingUtil.test("SelectiveSorting", data, sort);
             SortingUtil.test("InsertionSorting", data, sort);
+            SortingUtil.test("MergeSorting", data, sort);
         }
 //        long time = System.nanoTime();
 //        SelectiveSorting.sort(data, "asc");
