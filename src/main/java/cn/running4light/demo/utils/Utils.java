@@ -5,7 +5,7 @@ import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.LinearSearch;
 import cn.running4light.demo.template.sort.SelectiveSorting;
 import cn.running4light.demo.unfinished.LeetCode12;
-import cn.running4light.demo.unfinished.LeetCode206;
+import cn.running4light.demo.finished.LeetCode206;
 
 import java.util.ArrayList;
 import java.util.List;
