@@ -34,6 +34,7 @@ public class Utils {
         list.add(new Catalogue("移除链表元素", LeetCode203.class));
         list.add(new Catalogue("翻转链表", LeetCode206.class));
         list.add(new Catalogue("删除链表的倒数第 N 个结点", LeetCode19.class));
+        list.add(new Catalogue("旋转链表", LeetCode61.class));
 
 
 

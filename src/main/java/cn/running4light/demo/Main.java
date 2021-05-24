@@ -9,6 +9,7 @@ import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
+import cn.running4light.demo.finished.LeetCode61;
 import cn.running4light.demo.unfinished.LeetCode692;
 import cn.running4light.demo.finished.JZ14;
 
@@ -31,7 +32,19 @@ public class Main {
 //        testLeetCode692();
 //        testLeetCode206();
 //        teetLeetCode19();
-        testJZ14();
+//        testJZ14();
+        testLeetCode61();
+    }
+
+    private static void testLeetCode61() {
+        LeetCode61 leetCode61 = new LeetCode61();
+        ListNode head = new ListNode(7);
+        for (int i = 1; i < 7; i++) {
+            head.next = new ListNode(i, head.next);
+        }
+        System.err.println(head);
+        leetCode61.rotateRight(head, 8);
+
     }
 
     private static void testJZ14() {
