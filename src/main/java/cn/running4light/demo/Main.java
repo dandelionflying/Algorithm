@@ -5,6 +5,7 @@ import cn.running4light.demo.finished.TreeNode;
 import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.linkedlist.entity.ListNode;
+import cn.running4light.demo.finished.JZ16;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
@@ -33,7 +34,40 @@ public class Main {
 //        testLeetCode206();
 //        teetLeetCode19();
 //        testJZ14();
-        testLeetCode61();
+//        testLeetCode61();
+        testJZ16();
+    }
+
+    private static void testJZ16() {
+        JZ16 jz16 = new JZ16();
+        /* ListNode head = new ListNode(1);
+       for (int i = 6; i > 1; i--) {
+            head.next = new ListNode(i, head.next);
+        }*/
+        /*for (int i = 2; i >= 1; i--) {
+            head.next = new ListNode(2*i + 1, head.next);
+        }*/
+       /* for (int i = 3; i >= 2; i--) {
+            head2.next = new ListNode(2*i, head2.next);
+        }*/
+        /*ListNode head2 = new ListNode(2);
+        for (int i = 7; i > 2; i--) {
+            head2.next = new ListNode(i, head2.next);
+        }*/
+
+//        {1,3,10,20},{4,5,6,7}
+        ListNode head = new ListNode(1);
+        ListNode node3 = new ListNode(3,head.next);
+        head.next = node3;
+        ListNode node10 = new ListNode(10,node3.next);
+        node3.next = node10;
+        node10.next = new ListNode(20,node10.next);
+        ListNode head2 = new ListNode(4);
+        for (int i = 7; i > 4; i--) {
+            head2.next = new ListNode(i, head2.next);
+        }
+        ListNode merge = jz16.Merge(head, head2);
+        System.err.println(merge);
     }
 
     private static void testLeetCode61() {
