@@ -6,6 +6,7 @@ import cn.running4light.demo.template.LinearSearch;
 import cn.running4light.demo.template.sort.SelectiveSorting;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
+import cn.running4light.demo.finished.LeetCode19;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +27,13 @@ public class Utils {
         list.add(new Catalogue("旋转数组求最小", JZ6.class));
         list.add(new Catalogue("斐波那契数列", JZ7.class));
         list.add(new Catalogue("跳台阶--斐波那契数列问题", JZ8.class));
+        list.add(new Catalogue("链表中倒数第k个结点", JZ14.class));
         // LeetCode
         list.add(new Catalogue("整数转罗马", LeetCode12.class));
         list.add(new Catalogue("有效的括号-- 栈的使用", LeetCode20.class));
         list.add(new Catalogue("移除链表元素", LeetCode203.class));
         list.add(new Catalogue("翻转链表", LeetCode206.class));
+        list.add(new Catalogue("删除链表的倒数第 N 个结点", LeetCode19.class));
 
 
 

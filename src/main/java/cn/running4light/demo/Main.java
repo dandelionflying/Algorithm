@@ -8,7 +8,9 @@ import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
+import cn.running4light.demo.finished.LeetCode19;
 import cn.running4light.demo.unfinished.LeetCode692;
+import cn.running4light.demo.finished.JZ14;
 
 import java.util.Scanner;
 
@@ -27,7 +29,30 @@ public class Main {
 //        testLeetCode12();
 //        testLeetCOde20();
 //        testLeetCode692();
-        testLeetCode206();
+//        testLeetCode206();
+//        teetLeetCode19();
+        testJZ14();
+    }
+
+    private static void testJZ14() {
+        JZ14 zj14 = new JZ14() ;
+        ListNode head = new ListNode(7);
+        for (int i = 1; i < 7; i++) {
+            head.next = new ListNode(i, head.next);
+        }
+        ListNode listNode = zj14.find2(head, 8);
+        System.err.println(listNode);
+    }
+
+    private static void teetLeetCode19() {
+        ListNode head = new ListNode(7);
+        for (int i = 1; i < 7; i++) {
+            head.next = new ListNode(i, head.next);
+        }
+        LeetCode19 leetCode19 = new LeetCode19();
+        System.err.println(head);
+        ListNode listNode = leetCode19.removeNthFromEnd2(head, 2);
+        System.err.println(listNode);
     }
 
     private static void testLeetCode206() {
