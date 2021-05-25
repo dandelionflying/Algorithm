@@ -22,25 +22,22 @@ public class SortingUtil {
         Class<?> aClass = Class.forName("cn.running4light.demo.template.sort."+sortName);
         Method method = aClass.getDeclaredMethod("sort", Comparable[].class, String.class);
         Object invoke = method.invoke(aClass, data, sort);
-//        Method[] declaredMethods = aClass.getDeclaredMethods();
-//        for (Method m:
-//                declaredMethods) {
-//
-//        }
-
-
-        /*if("SelectiveSorting".equals(sortName)){
-            SelectiveSorting.sort(data, sort);
-        }
-        if("InsertionSorting".equals(sortName)){
-            InsertionSorting.sort(data, sort);
-        }*/
-
         long endTime = System.nanoTime();
-       /* for (T d :
-                data) {
-            System.err.print(d+" ");
-        }*/
+        double result = (endTime - time) / 1000000000.0;
+        boolean check = SortingUtil.checkSorted(data, sort);
+        System.err.println("\n排序算法："+sortName+"\t数组长度:"+data.length+"\t执行时间："+result+" s" +"\t是否排序成功：" +check);
+    }
+    /**
+     * @Description 性能测试--类名+方法名
+     * @Author running4light朱泽雄
+     * @CreateTime 9:54 2021/5/25
+     */
+    public static <T extends Comparable<T>> void test2(String sortName, String methodName, T[] data, String sort) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        long time = System.nanoTime();
+        Class<?> aClass = Class.forName("cn.running4light.demo.template.sort."+sortName);
+        Method method = aClass.getDeclaredMethod(methodName, Comparable[].class, String.class);
+        Object invoke = method.invoke(aClass, data, sort);
+        long endTime = System.nanoTime();
         double result = (endTime - time) / 1000000000.0;
         boolean check = SortingUtil.checkSorted(data, sort);
         System.err.println("\n排序算法："+sortName+"\t数组长度:"+data.length+"\t执行时间："+result+" s" +"\t是否排序成功：" +check);
