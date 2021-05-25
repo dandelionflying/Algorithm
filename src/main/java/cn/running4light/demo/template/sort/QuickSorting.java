@@ -2,6 +2,8 @@ package cn.running4light.demo.template.sort;
 
 import cn.running4light.demo.utils.SortingUtil;
 
+import java.util.Random;
+
 /**
  * @author running4light
  * @description 快速排序
@@ -11,7 +13,7 @@ import cn.running4light.demo.utils.SortingUtil;
  */
 public class QuickSorting {
     private static String sort = "";
-
+    private static Random random = new Random();
     public static <T extends Comparable<T>> void sort(T[] arr, String sorts){
         sort = sorts;
         if("asc".equals(sort))
@@ -46,6 +48,11 @@ public class QuickSorting {
      * @CreateTime 12:17 2021/5/25
      */
     public static <E extends Comparable<E>> int partitionAsc(E[] arr, int l, int r){
+        // 随机标记索引，不以l为基准
+        // 生成 [l,r]之间的随机索引
+        int p = l + random.nextInt(r - l + 1);
+        SortingUtil.swap(arr, l, p);
+
         E value = arr[l];
         int j = l;
         int i = l + 1;
