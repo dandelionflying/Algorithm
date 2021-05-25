@@ -18,6 +18,7 @@ public class MergeSorting {
      */
     public static <E extends Comparable<E>> void sort(E[] arr, String sorts){
         sort = sorts;
+        E[] temp = Arrays.copyOf(arr, arr.length);
         mergeSort(arr, 0, arr.length - 1);
     }
     /**

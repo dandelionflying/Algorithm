@@ -45,14 +45,16 @@ public class MainForTemplate {
 //        Integer[] data = {52,5,6,8,7,1,3,88,121};
         int n = 10000;
         int[] dataSize = {10000,100000};
+//        int[] dataSize = {100};
         String sort = "asc";
         for (int nn :
                 dataSize) {
             Integer[] data = ArrayGenerator.generateRandom(nn, nn);
 //            SortingUtil.test("SelectiveSorting", data, sort);
 //            SortingUtil.test("InsertionSorting", data, sort);
-            SortingUtil.test("MergeSorting", data, sort);
-            SortingUtil.test2("MergeSorting","sort2", data, sort);
+//            SortingUtil.test("MergeSorting", data, sort);
+//            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
+            SortingUtil.test("QuickSorting", data, sort);
         }
 //        long time = System.nanoTime();
 //        SelectiveSorting.sort(data, "asc");
