@@ -27,7 +27,7 @@ public class MergeSorting {
      */
     public static <E extends Comparable<E>> void sort2(E[] arr, String sorts){
         sort = sorts;
-        mergeSort(arr, 0, arr.length - 1);
+        mergeSort2(arr, 0, arr.length - 1);
     }
     /**
      * @Description 划分
