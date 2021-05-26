@@ -9,7 +9,7 @@ import java.util.Random;
  * @description 双路快排
  * @createTime 2021/5/26 11:12
  */
-public class TwoWayQuickSort {
+public class QuickSortTwoWay {
     private static String sort = "";
     private static Random random = new Random();
     /**

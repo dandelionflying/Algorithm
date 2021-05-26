@@ -59,9 +59,9 @@ public class MainForTemplate {
 //            SortingUtil.test("QuickSorting", data2, sort);// 快排--测试有序数组
 //            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试有序数组
             SortingUtil.test2("QuickSorting", "sort2", data3, sort);// 快排优化--随机索引标记--测试单值数组
-            SortingUtil.test("TwoWayQuickSort", data, sort);// 双路快排--测试单值数组
+            SortingUtil.test("QuickSortTwoWay", data, sort);// 双路快排--测试单值数组
             SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试普通随机数组
-            SortingUtil.test("TwoWayQuickSort", data, sort);// 双路快排
+            SortingUtil.test("QuickSortTwoWay", data, sort);// 双路快排
 //            SortingUtil.test2("QuickSorting", "sort3", data, sort);
         }
     }

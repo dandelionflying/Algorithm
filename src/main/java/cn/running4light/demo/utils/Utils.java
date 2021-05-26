@@ -6,7 +6,7 @@ import cn.running4light.demo.template.LinearSearch;
 import cn.running4light.demo.template.sort.MergeSorting;
 import cn.running4light.demo.template.sort.QuickSorting;
 import cn.running4light.demo.template.sort.SelectiveSorting;
-import cn.running4light.demo.template.sort.TwoWayQuickSort;
+import cn.running4light.demo.template.sort.QuickSortTwoWay;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
@@ -46,7 +46,7 @@ public class Utils {
         list.add(new Catalogue("选择排序", SelectiveSorting.class));
         list.add(new Catalogue("归并排序", MergeSorting.class));
         list.add(new Catalogue("快速排序", QuickSorting.class));
-        list.add(new Catalogue("双路快排", TwoWayQuickSort.class));
+        list.add(new Catalogue("双路快排", QuickSortTwoWay.class));
 
 
 
