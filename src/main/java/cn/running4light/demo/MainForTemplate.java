@@ -18,7 +18,8 @@ public class MainForTemplate {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         // 线性查找
 //        testLinearSearch();
-        testSort();
+//        testSort();
+        testQuickSort();
     }
     /**
      * @Description 测试--线性查找
@@ -36,7 +37,34 @@ public class MainForTemplate {
         System.err.println(LinearSearch.search(students,cc));
     }
     /**
-     * @Description 测试--选择排序
+     * @Description 快拍测试
+     * @Author running4light朱泽雄
+     * @CreateTime 10:15 2021/5/26
+     */
+    public static <E> void testQuickSort() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        int n = 10000;
+        int[] dataSize = {100000};
+//        int[] dataSize = {100};
+        String sort = "asc";
+        for (int nn :
+                dataSize) {
+            Integer[] data = ArrayGenerator.generateRandom(nn, nn);
+            Integer[] data2 = ArrayGenerator.generateAsc(nn, sort);
+            Integer[] data3 = ArrayGenerator.generateRandom(nn, 1);
+//            SortingUtil.test("SelectiveSorting", data, sort);
+//            SortingUtil.test("InsertionSorting", data, sort);
+//            SortingUtil.test("MergeSorting", data, sort);
+//            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
+            SortingUtil.test("QuickSorting", data, sort);// 快排--测试普通随机数组
+            SortingUtil.test("QuickSorting", data2, sort);// 快排--测试有序数组
+            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试有序数组
+            SortingUtil.test2("QuickSorting", "sort2", data3, sort);// 快排优化--随机索引标记--测试单值数组
+//            SortingUtil.test2("QuickSorting", "sort3", data, sort);
+        }
+    }
+
+    /**
+     * @Description 性能测试--排序算法对比
      * @Author running4light朱泽雄
      * @CreateTime 15:15 2021/5/17
      */
@@ -49,12 +77,13 @@ public class MainForTemplate {
         String sort = "asc";
         for (int nn :
                 dataSize) {
-            Integer[] data = ArrayGenerator.generateRandom(nn, nn);
+//            Integer[] data = ArrayGenerator.generateRandom(nn, nn);
+            Integer[] data = ArrayGenerator.generateAsc(nn, sort);
 //            SortingUtil.test("SelectiveSorting", data, sort);
 //            SortingUtil.test("InsertionSorting", data, sort);
 //            SortingUtil.test("MergeSorting", data, sort);
 //            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
-            SortingUtil.test("QuickSorting", data, sort);
+            SortingUtil.test("QuickSorting", data, sort);// 快排
         }
 //        long time = System.nanoTime();
 //        SelectiveSorting.sort(data, "asc");

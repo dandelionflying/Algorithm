@@ -23,4 +23,26 @@ public class ArrayGenerator {
         }
         return arr;
     }
+    /**
+     * @Description 生成有序数组
+     * @Author running4light朱泽雄
+     * @CreateTime 10:06 2021/5/26
+     */
+    public static Integer[] generateAsc(int length, String order){
+        Integer[] arr = new Integer[length];
+        if("asc".equals(order)){
+            for (int i = 0; i < length ; i++) {
+                arr[i] = i;
+            }
+        } else if("desc".equals(order)){
+            for (int i = length; i < 0 ; i--) {
+                arr[i] = i;
+            }
+        } else{
+            for (int i = length; i < 0 ; i--) {
+                arr[i] = 1;
+            }
+        }
+        return arr;
+    }
 }
