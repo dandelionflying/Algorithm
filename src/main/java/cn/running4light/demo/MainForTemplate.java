@@ -55,10 +55,13 @@ public class MainForTemplate {
 //            SortingUtil.test("InsertionSorting", data, sort);
 //            SortingUtil.test("MergeSorting", data, sort);
 //            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
-            SortingUtil.test("QuickSorting", data, sort);// 快排--测试普通随机数组
-            SortingUtil.test("QuickSorting", data2, sort);// 快排--测试有序数组
-            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试有序数组
+//            SortingUtil.test("QuickSorting", data, sort);// 快排--测试普通随机数组
+//            SortingUtil.test("QuickSorting", data2, sort);// 快排--测试有序数组
+//            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试有序数组
             SortingUtil.test2("QuickSorting", "sort2", data3, sort);// 快排优化--随机索引标记--测试单值数组
+            SortingUtil.test("TwoWayQuickSort", data, sort);// 双路快排--测试单值数组
+            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试普通随机数组
+            SortingUtil.test("TwoWayQuickSort", data, sort);// 双路快排
 //            SortingUtil.test2("QuickSorting", "sort3", data, sort);
         }
     }
@@ -83,7 +86,8 @@ public class MainForTemplate {
 //            SortingUtil.test("InsertionSorting", data, sort);
 //            SortingUtil.test("MergeSorting", data, sort);
 //            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
-            SortingUtil.test("QuickSorting", data, sort);// 快排
+//            SortingUtil.test("QuickSorting", data, sort);// 快排
+            SortingUtil.test("TwoWayQuickSort", data, sort);// 双路快排
         }
 //        long time = System.nanoTime();
 //        SelectiveSorting.sort(data, "asc");
