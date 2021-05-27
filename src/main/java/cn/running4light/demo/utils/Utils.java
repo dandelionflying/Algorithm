@@ -3,10 +3,7 @@ package cn.running4light.demo.utils;
 import cn.running4light.demo.entity.Catalogue;
 import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.LinearSearch;
-import cn.running4light.demo.template.sort.MergeSorting;
-import cn.running4light.demo.template.sort.QuickSorting;
-import cn.running4light.demo.template.sort.SelectiveSorting;
-import cn.running4light.demo.template.sort.QuickSortTwoWay;
+import cn.running4light.demo.template.sort.*;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
@@ -47,6 +44,7 @@ public class Utils {
         list.add(new Catalogue("归并排序", MergeSorting.class));
         list.add(new Catalogue("快速排序", QuickSorting.class));
         list.add(new Catalogue("双路快排", QuickSortTwoWay.class));
+        list.add(new Catalogue("三路快排", QuickSortThreeWay.class));
 
 
 

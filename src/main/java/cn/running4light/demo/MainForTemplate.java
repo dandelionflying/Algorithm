@@ -43,7 +43,7 @@ public class MainForTemplate {
      */
     public static <E> void testQuickSort() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         int n = 10000;
-        int[] dataSize = {100000};
+        int[] dataSize = {1000000};
 //        int[] dataSize = {100};
         String sort = "asc";
         for (int nn :
@@ -51,6 +51,8 @@ public class MainForTemplate {
             Integer[] data = ArrayGenerator.generateRandom(nn, nn);
             Integer[] data2 = ArrayGenerator.generateAsc(nn, sort);
             Integer[] data3 = ArrayGenerator.generateRandom(nn, 1);
+            Integer[] data4 = ArrayGenerator.generateRandom(nn, nn);
+            Integer[] data5 = ArrayGenerator.generateRandom(nn, nn);
 //            SortingUtil.test("SelectiveSorting", data, sort);
 //            SortingUtil.test("InsertionSorting", data, sort);
 //            SortingUtil.test("MergeSorting", data, sort);
@@ -58,10 +60,15 @@ public class MainForTemplate {
 //            SortingUtil.test("QuickSorting", data, sort);// 快排--测试普通随机数组
 //            SortingUtil.test("QuickSorting", data2, sort);// 快排--测试有序数组
 //            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试有序数组
-            SortingUtil.test2("QuickSorting", "sort2", data3, sort);// 快排优化--随机索引标记--测试单值数组
-            SortingUtil.test("QuickSortTwoWay", data, sort);// 双路快排--测试单值数组
-            SortingUtil.test2("QuickSorting", "sort2", data2, sort);// 快排优化--随机索引标记--测试普通随机数组
-            SortingUtil.test("QuickSortTwoWay", data, sort);// 双路快排
+//            SortingUtil.test2("QuickSorting", "sort2", data3, sort);// 快排优化--随机索引标记--测试单值数组
+//            SortingUtil.test("QuickSortTwoWay", data3, sort);// 双路快排--测试单值数组
+            SortingUtil.test2("QuickSorting", "sort2", data, sort);// 快排优化--随机索引标记--测试普通随机数组
+            SortingUtil.test("QuickSortTwoWay", data5, sort);// 双路快排
+            SortingUtil.test2("QuickSortThreeWay", "sort", data4, sort);// 三路快排
+            for (Integer e :
+                    data4) {
+                System.err.print(e + " ");
+            }
 //            SortingUtil.test2("QuickSorting", "sort3", data, sort);
         }
     }
