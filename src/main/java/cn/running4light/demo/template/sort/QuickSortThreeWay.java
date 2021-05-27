@@ -7,6 +7,7 @@ import java.util.Random;
 /**
  * @author running4light
  * @description 三路快排
+ *      1.时间复杂度：O(n)
  * @CreateTime 11:36 2021/5/27
  */
 public class QuickSortThreeWay {
