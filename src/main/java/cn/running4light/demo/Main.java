@@ -14,6 +14,8 @@ import cn.running4light.demo.finished.LeetCode61;
 import cn.running4light.demo.unfinished.LeetCode692;
 import cn.running4light.demo.finished.JZ14;
 import cn.running4light.demo.finished.NC105;
+import cn.running4light.demo.unfinished.LeetCode875;
+import cn.running4light.demo.utils.ArrayGenerator;
 
 import java.util.Scanner;
 
@@ -37,7 +39,14 @@ public class Main {
 //        testJZ14();
 //        testLeetCode61();
 //        testJZ16();
-        testNC105();
+//        testNC105();
+        testLeetCOde875();
+    }
+
+    private static void testLeetCOde875() {
+        Integer[] data = ArrayGenerator.generateRandom(50, 100);
+        LeetCode875 leetCode875 = new LeetCode875();
+        leetCode875.run(data, 8);
     }
 
     private static void testNC105() {
