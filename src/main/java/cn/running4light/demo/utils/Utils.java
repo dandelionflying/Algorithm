@@ -2,7 +2,8 @@ package cn.running4light.demo.utils;
 
 import cn.running4light.demo.entity.Catalogue;
 import cn.running4light.demo.finished.*;
-import cn.running4light.demo.template.LinearSearch;
+import cn.running4light.demo.template.search.BinarySearch;
+import cn.running4light.demo.template.search.LinearSearch;
 import cn.running4light.demo.template.sort.*;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
@@ -40,6 +41,7 @@ public class Utils {
 
 
         list.add(new Catalogue("线性查找(最普通的，主要是记录泛型用法)", LinearSearch.class));
+        list.add(new Catalogue("二分查找", BinarySearch.class));
         list.add(new Catalogue("选择排序", SelectiveSorting.class));
         list.add(new Catalogue("归并排序", MergeSorting.class));
         list.add(new Catalogue("快速排序", QuickSorting.class));

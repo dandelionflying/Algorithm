@@ -1,4 +1,4 @@
-package cn.running4light.demo.template;
+package cn.running4light.demo.template.search;
 
 /**
  * @author running4light

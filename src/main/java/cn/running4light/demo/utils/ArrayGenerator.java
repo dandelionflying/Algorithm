@@ -27,6 +27,7 @@ public class ArrayGenerator {
      * @Description 生成有序数组
      * @Author running4light朱泽雄
      * @CreateTime 10:06 2021/5/26
+     * @param order "asc" for incremental or "desc" for decreasing, others for equivalence
      */
     public static Integer[] generateAsc(int length, String order){
         Integer[] arr = new Integer[length];
