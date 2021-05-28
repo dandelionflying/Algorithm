@@ -16,6 +16,7 @@ import cn.running4light.demo.utils.SearchUtil;
  */
 public class NC105 {
     public int search (Integer[] nums, Integer target) {
-        return BinarySearch.searchExistMinElement(nums, target);
+//        return BinarySearch.searchExistMinElement(nums, target);
+        return BinarySearch.searchExistMaxElement(nums, target);
     }
 }

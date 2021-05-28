@@ -42,8 +42,9 @@ public class Main {
 
     private static void testNC105() {
         NC105 nc105 = new NC105();
-        Integer[] data = {-2,1,2};
-        int search = nc105.search(data, -2);
+//        Integer[] data = {-2,1,2};
+        Integer[] data = {1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 6, 7, 8, 8, 9};
+        int search = nc105.search(data, 8);
         System.err.println(search);
     }
 
