@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @author running4light
- * @description 合并两个排序的链表
+ * @description 牛客--合并两个排序的链表
  * @createTime 2021/5/24 11:50
  */
 public class JZ16 {

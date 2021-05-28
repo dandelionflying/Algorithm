@@ -81,5 +81,39 @@ public class BinarySearch {
         }
         return -1;
     }
-
+    /**
+     * @Description 二分查找--查找递增数组中等于target的最小索引
+     * @Author running4light朱泽雄
+     * @CreateTime 14:13 2021/5/28
+     */
+    public static <E extends Comparable<E>> Integer searchExistMinElement(E[] arr, E value){
+        int length = arr.length;
+        if(length < 1){
+            return -1;
+        }
+        int l = 0;
+        int r = length - 1;
+        int mid = 0;
+        while (l < r) {
+            mid =  l+ (r - l)/2;
+            if(arr[mid].compareTo(value) == 0){
+                r = mid;
+                continue;
+            }
+            if(arr[mid].compareTo(value) < 0){
+                l = mid + 1;
+                continue;
+            }
+            if(arr[mid].compareTo(value) > 0){
+                r = mid - 1;
+                continue;
+            }
+        }
+        if(arr[l] == value){
+            // 查找结束并且存在目标值
+//            System.err.println(l + " " + r + " " + mid);
+            return l;
+        }
+        return -1;
+    }
 }

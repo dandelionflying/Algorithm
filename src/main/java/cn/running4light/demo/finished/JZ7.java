@@ -2,7 +2,7 @@ package cn.running4light.demo.finished;
 
 /**
  * @author running4light
- * @description 	斐波那契数列
+ * @description 	牛客--斐波那契数列
  * 递归可做，但消耗资源更多
  * 差异：
  *  递归求第39项：    63245986	耗时：224

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author running4light
- * @description
+ * @description 牛客--链表中倒数第k个结点
  * @createTime 2021/5/24 10:01
  */
 public class JZ14 {

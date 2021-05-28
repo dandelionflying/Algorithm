@@ -3,7 +3,7 @@ package cn.running4light.demo.finished;
 import java.util.Stack;
 
 /**
- * 	@tite 用两个栈实现队列
+ * 	@tite 牛客--用两个栈实现队列
  *  @description 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型
  * eg:
  * in:[3,4,5,1,2]

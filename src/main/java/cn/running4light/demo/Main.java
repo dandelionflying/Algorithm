@@ -13,6 +13,7 @@ import cn.running4light.demo.finished.LeetCode19;
 import cn.running4light.demo.finished.LeetCode61;
 import cn.running4light.demo.unfinished.LeetCode692;
 import cn.running4light.demo.finished.JZ14;
+import cn.running4light.demo.finished.NC105;
 
 import java.util.Scanner;
 
@@ -35,7 +36,15 @@ public class Main {
 //        teetLeetCode19();
 //        testJZ14();
 //        testLeetCode61();
-        testJZ16();
+//        testJZ16();
+        testNC105();
+    }
+
+    private static void testNC105() {
+        NC105 nc105 = new NC105();
+        Integer[] data = {-2,1,2};
+        int search = nc105.search(data, -2);
+        System.err.println(search);
     }
 
     private static void testJZ16() {
