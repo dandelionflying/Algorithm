@@ -1,4 +1,4 @@
-package cn.running4light.demo.unfinished;
+package cn.running4light.demo.finished;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -29,22 +29,48 @@ public class LeetCode875 {
      * @CreateTime 15:33 2021/5/28
      */
     public int run(Integer[] piles, Integer h){
-        minEatingSpeed(piles,h);
-        return 0;
+        return minEatingSpeed(piles,h);
     }
-
+    /**
+     * @Description " 寻找eatingTIme(k)<= H的最大eatingtime对应的k"
+     *  总时长h与每小时吃的个数k成单调负相关，k范围从1到 piles数组的最大值递增，符合二分查找的特性--已排序
+     * @Author running4light朱泽雄
+     * @CreateTime 15:14 2021/5/31
+     */
     public Integer minEatingSpeed(Integer[] piles, Integer h) {
         int l = 1;
         Integer max = Arrays.stream(piles).max(Comparator.naturalOrder()).orElse(null);
+       /* int max = piles[0];
+        for (Integer in :
+                piles) {
+            if (in > max){
+                max = in;
+            }
+        }*/
 //        Arrays.sort(piles,(a, b) -> a > b ? 1 : -1);
         int r = max;
         while (l < r){
             int mid = l + (r - l)/2;// 下取整
 //            int mid = l + (r - l)/2;// 上取整
             if (eatingTime(piles, mid) <= h){
-
+                r = mid;
+            }else {
+                l = mid + 1;
             }
         }
         return l;
+    }
+    /**
+     * @Description 每小时吃k根香蕉，吃完全部的时长
+     * @Author running4light朱泽雄
+     * @CreateTime 15:24 2021/5/31
+     */
+    private int eatingTime (Integer[] piles, Integer k){
+        int res = 0;
+        for (int p :
+                piles) {
+            res += p / k + (p % k > 0 ? 1 : 0);
+        }
+        return res;
     }
 }
