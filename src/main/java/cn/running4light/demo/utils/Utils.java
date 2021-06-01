@@ -5,7 +5,7 @@ import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.search.BinarySearch;
 import cn.running4light.demo.template.search.LinearSearch;
 import cn.running4light.demo.template.sort.*;
-import cn.running4light.demo.unfinished.LeetCode1011;
+import cn.running4light.demo.finished.LeetCode1011;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;

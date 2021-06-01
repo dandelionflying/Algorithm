@@ -6,7 +6,7 @@ import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.finished.JZ16;
-import cn.running4light.demo.unfinished.LeetCode1011;
+import cn.running4light.demo.finished.LeetCode1011;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
