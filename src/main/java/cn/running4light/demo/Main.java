@@ -6,6 +6,7 @@ import cn.running4light.demo.finished.JZ4;
 import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.finished.JZ16;
+import cn.running4light.demo.unfinished.LeetCode1011;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
@@ -41,7 +42,18 @@ public class Main {
 //        testJZ16();
 //        testNC105();
 //        testLeetCOde875();
-        testLeetCode875();
+//        testLeetCode875();
+        testLeetCode1011();
+    }
+
+    private static void testLeetCode1011() {
+        LeetCode1011 leetCode1011 = new LeetCode1011();
+//        int[] weights = {1,2,3,4,5,6,7,8,9,10};
+//        int[] weights = {3,2,2,4,1,4};
+        int[] weights = {1,2,3,1,1};
+        int days = 4;
+        int run = leetCode1011.run(weights, days);
+        System.err.println(run);
     }
 
     private static void testLeetCode875() {

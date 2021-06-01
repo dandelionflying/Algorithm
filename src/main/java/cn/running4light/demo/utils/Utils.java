@@ -5,6 +5,7 @@ import cn.running4light.demo.finished.*;
 import cn.running4light.demo.template.search.BinarySearch;
 import cn.running4light.demo.template.search.LinearSearch;
 import cn.running4light.demo.template.sort.*;
+import cn.running4light.demo.unfinished.LeetCode1011;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
@@ -38,6 +39,8 @@ public class Utils {
         list.add(new Catalogue("删除链表的倒数第 N 个结点", LeetCode19.class));
         list.add(new Catalogue("旋转链表", LeetCode61.class));
         list.add(new Catalogue("爱吃香蕉的珂珂--二分搜索", LeetCode875.class));
+        list.add(new Catalogue("在 D 天内送达包裹的能力--二分搜索", LeetCode1011.class));
+
 
 
 
