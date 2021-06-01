@@ -7,6 +7,7 @@ import cn.running4light.demo.finished.JZ7;
 import cn.running4light.demo.linkedlist.entity.ListNode;
 import cn.running4light.demo.finished.JZ16;
 import cn.running4light.demo.finished.LeetCode1011;
+import cn.running4light.demo.unfinished.JZ11;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode20;
 import cn.running4light.demo.finished.LeetCode206;
@@ -43,7 +44,12 @@ public class Main {
 //        testNC105();
 //        testLeetCOde875();
 //        testLeetCode875();
-        testLeetCode1011();
+//        testLeetCode1011();
+        testJZ11();
+    }
+
+    private static void testJZ11() {
+        System.err.println(new JZ11().NumberOf1(10));
     }
 
     private static void testLeetCode1011() {
