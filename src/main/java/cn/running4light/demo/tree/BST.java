@@ -39,6 +39,86 @@ public class BST<E extends Comparable<E>> {
         return size == 0;
     }
     /**
+     * @Description 删除最小值
+     * @Author running4light朱泽雄
+     * @CreateTime 17:07 2021/6/2
+     * @Return
+     */
+    public E removeMin(){
+        E tmp = min();
+        root = removeMin(root);
+        return tmp;
+    }
+
+    private Node removeMin(Node node) {
+        if (node.left == null){
+            Node right = node.right;
+            node.right = null;
+            size--;
+            return right;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+    /**
+     * @Description 删除最大值
+     * @Author running4light朱泽雄
+     * @CreateTime 17:07 2021/6/2
+     * @Return
+     */
+    public E removeMax(){
+        E tmp = min();
+        root = removeMax(root);
+        return tmp;
+    }
+
+    private Node removeMax(Node node) {
+        if (node.right == null){
+            Node left = node.left;
+            node.left = null;
+            size--;
+            return left;
+        }
+        node.right = removeMax(node.right);
+        return node;
+    }
+
+    /**
+     * @Description 最小值
+     * @Author running4light朱泽雄
+     * @CreateTime 16:49 2021/6/2
+     * @Return
+     */
+    public E min(){
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+        return min(root).val;
+    }
+
+    private Node min(Node node) {
+        if(node.left == null)
+            return node;
+        return min(node.left);
+    }
+    /**
+     * @Description 最大值
+     * @Author running4light朱泽雄
+     * @CreateTime 16:50 2021/6/2
+     * @Return
+     */
+    public E max(){
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+        return max(root).val;
+    }
+
+    private Node max(Node node) {
+        if(node.right == null)
+            return node;
+        return max(node.right);
+    }
+
+    /**
      * @Description 添加新元素
      * @Author running4light朱泽雄
      * @CreateTime 11:54 2021/6/2

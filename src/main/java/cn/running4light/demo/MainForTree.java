@@ -19,9 +19,9 @@ public class MainForTree {
                 data) {
             bst.add(e);
         }
-        boolean search = bst.contains(53);
         System.err.println(bst);
-        System.err.println(search);
+        System.err.println("是否存在53：" + bst.contains(53));
+        System.err.println("是否存在52：" + bst.contains(52));
         System.err.println("层序遍历:");
         System.err.println(bst.levelTraversal());
 //        bst.pre();
