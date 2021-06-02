@@ -6,6 +6,7 @@ import cn.running4light.demo.template.search.BinarySearch;
 import cn.running4light.demo.template.search.LinearSearch;
 import cn.running4light.demo.template.sort.*;
 import cn.running4light.demo.finished.LeetCode1011;
+import cn.running4light.demo.tree.BST;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
@@ -24,7 +25,7 @@ public class Utils {
         List<Object> list = new ArrayList();
         // 牛客
         list.add(new Catalogue("替换空格", JZ2.class));
-        list.add(new Catalogue("重建二叉树", new JZ4()));
+        list.add(new Catalogue("重建二叉树、前中后序遍历", new JZ4()));
         list.add(new Catalogue("用两个栈实现队列", JZ5.class));
         list.add(new Catalogue("旋转数组求最小", JZ6.class));
         list.add(new Catalogue("斐波那契数列", JZ7.class));
@@ -51,6 +52,7 @@ public class Utils {
         list.add(new Catalogue("快速排序", QuickSorting.class));
         list.add(new Catalogue("双路快排", QuickSortTwoWay.class));
         list.add(new Catalogue("三路快排", QuickSortThreeWay.class));
+        list.add(new Catalogue("二分搜索树", BST.class));
 
 
 
