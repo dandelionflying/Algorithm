@@ -26,7 +26,7 @@ import java.util.Scanner;
  * @Author running4light朱泽雄
  * @CreateTime 9:13 2021/5/19
  */
-public class Main {
+public class MainForCodeTest {
     public static void main(String[] args) {
 //        testZJ4();
 //        testJZ6();
