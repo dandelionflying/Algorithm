@@ -52,7 +52,7 @@ public class Utils {
         list.add(new Catalogue("快速排序", QuickSorting.class));
         list.add(new Catalogue("双路快排", QuickSortTwoWay.class));
         list.add(new Catalogue("三路快排", QuickSortThreeWay.class));
-        list.add(new Catalogue("二分搜索树", BST.class));
+        list.add(new Catalogue("二分搜索树、前中后序遍历、搜索、层序遍历", BST.class));
 
 
 

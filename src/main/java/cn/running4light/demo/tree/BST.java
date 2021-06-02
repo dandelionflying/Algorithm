@@ -1,5 +1,12 @@
 package cn.running4light.demo.tree;
 
+
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.concurrent.ArrayBlockingQueue;
+
 /**
  * @author running4light
  * @description 二分搜索树
@@ -140,8 +147,28 @@ public class BST<E extends Comparable<E>> {
         System.err.print(node.val);
     }
 
-    // 层序遍历
-
+    /**
+     * @Description 层序遍历(广度优先遍历)
+     * @Author running4light朱泽雄
+     * @CreateTime 15:57 2021/6/2
+     * @Return
+     */
+    public String levelTraversal(){
+        StringBuilder sb = new StringBuilder();
+        Queue<Node> queue = new LinkedList();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node cur = queue.remove();
+            sb.append(cur.val + " ");
+            if(cur.left != null){
+                queue.add(cur.left);
+            }
+            if(cur.right != null){
+                queue.add(cur.right);
+            }
+        }
+        return sb.toString();
+    }
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
