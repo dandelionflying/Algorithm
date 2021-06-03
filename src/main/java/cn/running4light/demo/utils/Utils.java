@@ -10,6 +10,7 @@ import cn.running4light.demo.tree.BST;
 import cn.running4light.demo.unfinished.LeetCode12;
 import cn.running4light.demo.finished.LeetCode206;
 import cn.running4light.demo.finished.LeetCode19;
+import cn.running4light.demo.finished.LeetCode804;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +42,7 @@ public class Utils {
         list.add(new Catalogue("旋转链表", LeetCode61.class));
         list.add(new Catalogue("爱吃香蕉的珂珂--二分搜索", LeetCode875.class));
         list.add(new Catalogue("在 D 天内送达包裹的能力--二分搜索", LeetCode1011.class));
+        list.add(new Catalogue("唯一摩尔斯密码词", LeetCode804.class));
 
 
 
