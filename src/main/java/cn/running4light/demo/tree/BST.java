@@ -38,6 +38,49 @@ public class BST<E extends Comparable<E>> {
     public boolean isEmpty(){
         return size == 0;
     }
+
+    /**
+     * @Description 删除指定结点
+     * @Author running4light朱泽雄
+     * @CreateTime 13:21 2021/6/3
+     * @Return
+     */
+    public void remove(E e){
+        root = remove(root, e);
+    }
+    private Node remove(Node node, E e) {
+        if (node == null)
+            return null;
+        if (e.compareTo(node.val) < 0){
+            node.left = remove(node.left, e);
+        } else if (e.compareTo(node.val) > 0){
+            node.right = remove(node.right, e);
+        } else if (e.compareTo(node.val) == 0){
+            Node right = node.right;
+            Node left = node.left;
+            if(right != null && left != null){
+                // 找到右子树的最小节点删除后作为新节点返回          也可找左子树的最大node
+                Node min = min(right);// 找到右子树最小暂存
+                Node afterRemove = removeMin(right);// 移除最小node并返回移除该结点后的右子树
+                min.right = afterRemove;// 将暂存结点的右子树指向 新的右子树
+                min.left = node.left;// 将暂存结点的左子树指向当前node（即待删除结点） 的左子树，
+                node.left = node.right = null;
+                return min;
+            }
+            if(left == null){
+                node.right = null;
+                size--;// 注意容量大小控制
+                return right;
+            }
+            if(right == null){
+                node.left = null;
+                size--;
+                return left;
+            }
+        }
+        return node;
+    }
+
     /**
      * @Description 删除最小值
      * @Author running4light朱泽雄
@@ -83,40 +126,7 @@ public class BST<E extends Comparable<E>> {
         return node;
     }
 
-    /**
-     * @Description 最小值
-     * @Author running4light朱泽雄
-     * @CreateTime 16:49 2021/6/2
-     * @Return
-     */
-    public E min(){
-        if (size == 0)
-            throw new IllegalArgumentException("BST is empty");
-        return min(root).val;
-    }
 
-    private Node min(Node node) {
-        if(node.left == null)
-            return node;
-        return min(node.left);
-    }
-    /**
-     * @Description 最大值
-     * @Author running4light朱泽雄
-     * @CreateTime 16:50 2021/6/2
-     * @Return
-     */
-    public E max(){
-        if (size == 0)
-            throw new IllegalArgumentException("BST is empty");
-        return max(root).val;
-    }
-
-    private Node max(Node node) {
-        if(node.right == null)
-            return node;
-        return max(node.right);
-    }
 
     /**
      * @Description 添加新元素
@@ -172,6 +182,40 @@ public class BST<E extends Comparable<E>> {
         } else {
             return search(node.right, e);
         }
+    }
+    /**
+     * @Description 最小值
+     * @Author running4light朱泽雄
+     * @CreateTime 16:49 2021/6/2
+     * @Return
+     */
+    public E min(){
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+        return min(root).val;
+    }
+
+    private Node min(Node node) {
+        if(node.left == null)
+            return node;
+        return min(node.left);
+    }
+    /**
+     * @Description 最大值
+     * @Author running4light朱泽雄
+     * @CreateTime 16:50 2021/6/2
+     * @Return
+     */
+    public E max(){
+        if (size == 0)
+            throw new IllegalArgumentException("BST is empty");
+        return max(root).val;
+    }
+
+    private Node max(Node node) {
+        if(node.right == null)
+            return node;
+        return max(node.right);
     }
 
     /************************** 遍  历 **************************/
@@ -249,6 +293,10 @@ public class BST<E extends Comparable<E>> {
         }
         return sb.toString();
     }
+
+
+
+
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();

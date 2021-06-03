@@ -24,6 +24,9 @@ public class MainForTree {
         System.err.println("是否存在52：" + bst.contains(52));
         System.err.println("层序遍历:");
         System.err.println(bst.levelTraversal());
+        bst.remove(52);
+
+        System.err.println(bst.levelTraversal());
 //        bst.pre();
     }
 }
