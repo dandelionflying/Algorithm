@@ -35,7 +35,7 @@ public class MainForCodeTest {
 //        testJZ7();
 //        testLeetCode12();
 //        testLeetCOde20();
-//        testLeetCode692();
+        testLeetCode692();
 //        testLeetCode206();
 //        teetLeetCode19();
 //        testJZ14();
@@ -45,7 +45,7 @@ public class MainForCodeTest {
 //        testLeetCOde875();
 //        testLeetCode875();
 //        testLeetCode1011();
-        testJZ11();
+//        testJZ11();
     }
 
     private static void testJZ11() {
@@ -165,7 +165,7 @@ public class MainForCodeTest {
     private static void testLeetCode692() {
         LeetCode692 leetCode692 = new LeetCode692();
         String[] s = {"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
-        leetCode692.topKFrequent(s,4);
+        System.err.println(leetCode692.topKFrequent(s,4));;
     }
 
     private static void testLeetCOde20(){
