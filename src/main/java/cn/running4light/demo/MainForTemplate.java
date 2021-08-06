@@ -18,11 +18,11 @@ import java.util.Random;
  */
 public class MainForTemplate {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        boolean ifPrint = false;// 是否打印数组
+        boolean ifPrint = true;// 是否打印数组
         // 线性查找
 //        testLinearSearch(ifPrint);
-        testBinarySearch(ifPrint);
-//        testSort(ifPrint);
+//        testBinarySearch(ifPrint);
+        testSort(ifPrint);
 //        testQuickSort(ifPrint);
     }
     /**
@@ -104,14 +104,14 @@ public class MainForTemplate {
         String sort = "asc";
         for (int nn :
                 dataSize) {
-//            Integer[] data = ArrayGenerator.generateRandom(nn, nn);
-            Integer[] data = ArrayGenerator.generateAsc(nn, sort);
-//            SortingUtil.test("SelectiveSorting", data, sort);
-//            SortingUtil.test("InsertionSorting", data, sort);
+            Integer[] data = ArrayGenerator.generateRandom(nn, nn);
+//            Integer[] data = ArrayGenerator.generateAsc(nn, sort);
+//            SortingUtil.test("SelectiveSorting", data, sort, ifPrint);
+            SortingUtil.test("InsertionSorting", data, sort, ifPrint);
 //            SortingUtil.test("MergeSorting", data, sort);
 //            SortingUtil.test2("MergeSorting","sort2", data, sort);// 归并排序优化测试
 //            SortingUtil.test("QuickSorting", data, sort);// 快排
-            SortingUtil.test("TwoWayQuickSort", data, sort, ifPrint);// 双路快排
+//            SortingUtil.test("TwoWayQuickSort", data, sort, ifPrint);// 双路快排
         }
 
         System.err.println();

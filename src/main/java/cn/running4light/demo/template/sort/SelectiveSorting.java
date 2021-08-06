@@ -30,33 +30,9 @@ public class SelectiveSorting {
     private static <T extends Comparable<T>> void sortDesc(T[] data) {
         int index = 0;
         int tmpIndex = 0;
-        int minIndex = 0;
-        while (index < data.length) {
-            if (data[minIndex].compareTo(data[index]) <0 ) {
-                minIndex = index;
-            }
-            if (index == data.length - 1) {
-                // 交换
-                SortingUtil.swap(data, minIndex, tmpIndex);
-                tmpIndex++;
-                index = tmpIndex + 1;
-                minIndex = tmpIndex;
-                continue;
-            }
-            index++;
-        }
-    }
-    /**
-     * @Description 倒序
-     * @Author running4light朱泽雄
-     * @CreateTime 14:48 2021/5/17
-     */
-    private static <T extends Comparable<T>> void sortAsc(T[] data) {
-        int index = 0;
-        int tmpIndex = 0;
         int maxIndex = 0;
         while (index < data.length) {
-            if (data[maxIndex].compareTo(data[index]) > 0) {
+            if (data[maxIndex].compareTo(data[index]) <0 ) {
                 maxIndex = index;
             }
             if (index == data.length - 1) {
@@ -65,6 +41,32 @@ public class SelectiveSorting {
                 tmpIndex++;
                 index = tmpIndex + 1;
                 maxIndex = tmpIndex;
+                continue;
+            }
+            index++;
+        }
+    }
+    /**
+     * @Description 正序
+     * @Author running4light朱泽雄
+     * @CreateTime 14:48 2021/5/17
+     */
+    private static <T extends Comparable<T>> void sortAsc(T[] data) {
+        int index = 0;
+        int tmpIndex = 0;
+        int minIndex = 0;
+        while (index < data.length) {
+            T max = data[minIndex];
+            T ind = data[index];
+            if (data[minIndex].compareTo(data[index]) > 0) {
+                minIndex = index;
+            }
+            if (index == data.length - 1) {
+                // 交换
+                SortingUtil.swap(data, minIndex, tmpIndex);
+                tmpIndex++;
+                index = tmpIndex + 1;
+                minIndex = tmpIndex;
                 continue;
             }
             index++;

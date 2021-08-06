@@ -18,7 +18,7 @@ public class InsertionSorting {
      */
     public static <T extends Comparable<T>> void sort(T[] data, String sort) {
         if ("asc".equals(sort)) {
-            sortAsc2(data);
+            sortAsc(data);
         } else if ("desc".equals(sort)) {
             sortDesc(data);
         }
